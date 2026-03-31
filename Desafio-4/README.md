@@ -1,21 +1,25 @@
-# Desafio 4 - Agente de Integração (API)
+# Desafio 4: IA Generativa com Function Calling (Diferencial) 🚀
 
-Este diretório contém o código-fonte do agente integrador desenvolvido em **Node.js**, responsável por processar as requisições do Blip e realizar a busca de informações externas.
+Este diretório contém a solução do Desafio 4, desenvolvido como um diferencial para demonstrar domínio avançado em IA Generativa, integração de APIs e automação autônoma.
 
-## 🛠️ Especificações Técnicas
-- **Linguagem:** JavaScript (Node.js)
-- **Framework:** Express (ou o que você usou no index.js)
-- **Hospedagem:** Render
-- **Gerenciador de Pacotes:** NPM
+## 🎯 Objetivo
+Criar um **Agente de IA Generativa** que atua como *fallback* inteligente para o chatbot. Quando o fluxo principal não reconhece uma intenção, este agente interpreta a mensagem do usuário e decide automaticamente se deve consultar a API do OMDb para fornecer informações sobre filmes e séries.
 
-## 📂 Arquivos do Sistema
-- `index.js`: Ponto de entrada da aplicação e rotas da API.
-- `package.json`: Definição de dependências e scripts de inicialização.
-- `.env`: Configuração de variáveis de ambiente (Exemplo: Chave de API).
-- `.gitignore`: Proteção para não subir arquivos desnecessários (como node_modules).
+## 🛠️ Stack Tecnológica (Ferramentas)
+Para este desafio, utilizei as seguintes ferramentas:
+- **LLM (Cérebro da IA):** [Groq](https://groq.com/).
+- **Hospedagem:** [Render](https://render.com/).
+- **Linguagem:** Node.js (JavaScript).
+- **API de Dados:** OMDb API para consulta de informações cinematográficas.
 
-## 🧠 Desafios de Desenvolvimento
-O principal desafio técnico foi a estruturação do servidor para responder ao formato esperado pelo Blip (JSON), garantindo que os dados buscados fossem formatados corretamente antes do retorno. 
+## 🧠 Decisões Técnicas e Implementação
+- **Function Calling:** Defini a busca no OMDb como uma `tool` específica. O modelo não apenas responde texto, ele "entende" quando precisa de dados reais e chama a função de busca sozinho.
+- **Prompt Engineering:** O sistema foi instruído para ser um especialista em cinema, mantendo um tom prestativo e filtrando mensagens fora do contexto de filmes.
+- **Fallback Inteligente:** Em vez de uma resposta de erro, o usuário recebe uma experiência rica e fluida gerada por IA.
 
-## 🚀 Deploy
-A aplicação está configurada com **Continuous Deployment** via GitHub, onde cada alteração nesta pasta reflete automaticamente no ambiente de produção do Render.
+## 🚀 Como Executar
+1. Certifique-se de ter o [Node.js](https://nodejs.org/) instalado.
+2. Configure as variáveis de ambiente (`GROQ_API_KEY` e `OMDB_API_KEY`) no arquivo `.env`.
+3. Execute `npm install` para instalar as dependências.
+4. Inicie o servidor com `npm start`.
+
