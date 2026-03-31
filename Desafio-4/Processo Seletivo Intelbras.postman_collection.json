@@ -1,0 +1,85 @@
+{
+  "info": {
+    "_postman_id": "4bdafdd1-f045-45c3-b883-92ed85aeda31",
+    "name": "Processo Seletivo Intelbras",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48940237",
+    "_collection_link": "https://go.postman.co/collection/48940237-4bdafdd1-f045-45c3-b883-92ed85aeda31?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Desafio3",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "937189c6-2aab-11f1-be04-0242ac120004-93718a5c-2aab-11f1-be04-0242ac120004",
+            "type": "default"
+          }
+        ],
+        "url": {
+          "raw": "https://api.stormglass.io/v2/weather/point?lat=-27.6142799&lng=-48.6411949&params=waveHeight,airTemperature",
+          "protocol": "https",
+          "host": [
+            "api",
+            "stormglass",
+            "io"
+          ],
+          "path": [
+            "v2",
+            "weather",
+            "point"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "-27.6142799"
+            },
+            {
+              "key": "lng",
+              "value": "-48.6411949"
+            },
+            {
+              "key": "params",
+              "value": "waveHeight,airTemperature"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Desafio4",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"message\": \"Me indique um filme de ação recenteMe indique um filme de ação recente\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://agente-filmes.onrender.com/chat",
+          "protocol": "https",
+          "host": [
+            "agente-filmes",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "chat"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
